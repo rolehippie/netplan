@@ -1,0 +1,19 @@
+#jinja2: lstrip_blocks: True
+network:
+  version: {{ netplan_version }}
+  renderer: {{ netplan_renderer }}
+
+{% if netplan_ethernets | default(False) %}
+  ethernets:
+    {{ netplan_ethernets | to_nice_yaml(indent=2) | indent(width=4, indentfirst=False) }}
+{% endif %}
+
+{% if netplan_vlans | default(False) %}
+  vlans:
+    {{ netplan_vlans | to_nice_yaml(indent=2) | indent(width=4, indentfirst=False) }}
+{% endif %}
+
+{% if netplan_bridges | default(False) %}
+  bridges:
+    {{ netplan_bridges | to_nice_yaml(indent=2) | indent(width=4, indentfirst=False) }}
+{% endif %}

@@ -1,0 +1,9 @@
+# Standards: 0.1
+---
+- name: Apply netplan
+  command: netplan apply
+
+- name: Generate netplan
+  command: netplan generate
+
+...

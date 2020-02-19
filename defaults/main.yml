@@ -1,0 +1,42 @@
+# Standards: 0.1
+---
+# @var netplan_version:description: Version of the netplan config format
+netplan_version: '2'
+
+# @var netplan_renderer:description: Renderer used by netplan
+netplan_renderer: networkd
+
+# @var netplan_config_file:description: Path to config written to
+netplan_config_file: /etc/netplan/01-netcfg.yaml
+
+# @var netplan_ethernets:description: Definition of ethernet entries
+# @var netplan_ethernets:example: >
+# netplan_ethernets: |
+#   enp6s0:
+#     dhcp4: True
+# @end
+netplan_ethernets:
+
+# @var netplan_vlans:description: Definition of vlan entries
+# @var netplan_vlans:example: >
+# netplan_vlans:
+#   vlan905:
+#     id: 905
+#     dhcp4: True
+#     link: enp6s0
+# @end
+netplan_vlans:
+
+# @var netplan_bridges:description: Definition of bridge entries
+# @var netplan_bridges:example: >
+# netplan_bridges:
+#   virbr1:
+#     dhcp4: True
+#     dhcp4-overrides:
+#       use-routes: False
+#     interfaces:
+#       - vlan905
+# @end
+netplan_bridges:
+
+...

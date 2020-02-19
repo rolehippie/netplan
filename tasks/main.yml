@@ -1,0 +1,25 @@
+# Standards: 0.1
+---
+- name: Install required packages
+  with_items:
+    - nplan
+    - netplan.io
+  package:
+    name: '{{ item }}'
+    state: present
+  tags:
+    - netplan
+
+- name: Write network config
+  notify:
+    - Apply netplan
+  template:
+    src: config.j2
+    dest: '{{ netplan_config_file }}'
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  tags:
+    - netplan
+
+...
