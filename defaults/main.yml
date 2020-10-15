@@ -17,6 +17,17 @@ netplan_config_file: /etc/netplan/01-netcfg.yaml
 # @end
 netplan_ethernets:
 
+# @var netplan_bonds:description: Definition of bond entries
+# @var netplan_bonds:example: >
+# netplan_bonds:
+#   bond0:
+#     mode: balance-rr
+#     interfaces:
+#       - enp6s0
+#       - enp6s1
+# @end
+netplan_bonds:
+
 # @var netplan_vlans:description: Definition of vlan entries
 # @var netplan_vlans:example: >
 # netplan_vlans:

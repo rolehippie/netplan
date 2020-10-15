@@ -7,6 +7,7 @@ Ansible role to configure netplan
 ## Table of content
 
 * [Default Variables](#default-variables)
+  * [netplan_bonds](#netplan_bonds)
   * [netplan_bridges](#netplan_bridges)
   * [netplan_config_file](#netplan_config_file)
   * [netplan_ethernets](#netplan_ethernets)
@@ -20,6 +21,27 @@ Ansible role to configure netplan
 ---
 
 ## Default Variables
+
+### netplan_bonds
+
+Definition of bond entries
+
+#### Default value
+
+```YAML
+netplan_bonds:
+```
+
+#### Example usage
+
+```YAML
+netplan_bonds:
+  bond0:
+    mode: balance-rr
+    interfaces:
+      - enp6s0
+      - enp6s1
+```
 
 ### netplan_bridges
 
@@ -113,7 +135,7 @@ netplan_vlans:
 
 ## Dependencies
 
-- None
+* None
 
 ## License
 
