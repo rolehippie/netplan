@@ -7,5 +7,5 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 
 def test_is_installed(host):
-    pkg = host.package("nplan")
+    pkg = host.package("netplan.io")
     assert pkg.is_installed
