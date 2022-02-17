@@ -1,0 +1,7 @@
+# Standards: 1.2
+---
+netplan_packages:
+  - nplan
+  - netplan.io
+
+...

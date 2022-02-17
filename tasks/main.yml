@@ -1,5 +1,14 @@
 # Standards: 1.2
 ---
+- name: Include OS tasks
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
+    - "{{ ansible_distribution | lower }}.yml"
+    - "{{ ansible_os_family | lower }}.yml"
+  tags:
+    - netplan
+
 - name: Install required packages
   with_items: "{{ netplan_packages }}"
   package:

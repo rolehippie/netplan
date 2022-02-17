@@ -17,7 +17,6 @@ Building and improving this Ansible role have been sponsored by my employer **Pr
   * [netplan_bridges](#netplan_bridges)
   * [netplan_config_file](#netplan_config_file)
   * [netplan_ethernets](#netplan_ethernets)
-  * [netplan_packages](#netplan_packages)
   * [netplan_renderer](#netplan_renderer)
   * [netplan_version](#netplan_version)
   * [netplan_vlans](#netplan_vlans)
@@ -98,17 +97,6 @@ netplan_ethernets:
 netplan_ethernets: |
   enp6s0:
     dhcp4: True
-```
-
-### netplan_packages
-
-Packages to install depending on Ubuntu version
-
-#### Default value
-
-```YAML
-netplan_packages: "{{ ['nplan'] if ansible_distribution_major_version < 18 else ['nplan',\
-  \ 'netplan.io'] }}"
 ```
 
 ### netplan_renderer
