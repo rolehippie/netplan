@@ -1,5 +1,8 @@
 # Standards: 1.2
 ---
+# @var netplan_packages:description: Packages to install depending on Ubuntu version
+netplan_packages: "{{ ['nplan'] if ansible_distribution_major_version < 18 else ['nplan', 'netplan.io'] }}"
+
 # @var netplan_version:description: Version of the netplan config format
 netplan_version: '2'
 

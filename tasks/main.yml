@@ -1,9 +1,7 @@
 # Standards: 1.2
 ---
 - name: Install required packages
-  with_items:
-    - nplan
-    - netplan.io
+  with_items: "{{ netplan_packages }}"
   package:
     name: "{{ item }}"
     state: present
