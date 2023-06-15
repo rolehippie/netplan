@@ -29,4 +29,15 @@
   tags:
     - netplan
 
+- name: Create routing tables
+  when: netplan_rts | length > 0
+  template:
+    src: rt.j2
+    dest: /etc/iproute2/rt_tables
+    owner: root
+    group: root
+    mode: u=rw,g=r,o=r
+  tags:
+    - netplan
+
 ...

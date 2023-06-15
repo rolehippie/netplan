@@ -50,4 +50,18 @@ netplan_vlans:
 # @end
 netplan_bridges:
 
+# @var netplan_rts:description: Define the available routing tables
+# @var netplan_rts:example: >
+# netplan_rts:
+#   - id: 255
+#     name: local
+#   - id: 254
+#     name: main
+#   - id: 253
+#     name: default
+#   - id: 0
+#     name: unspec
+# @end
+netplan_rts: []
+
 ...

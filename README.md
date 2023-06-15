@@ -22,6 +22,7 @@ Building and improving this Ansible role have been sponsored by my current and p
   - [netplan_config_file](#netplan_config_file)
   - [netplan_ethernets](#netplan_ethernets)
   - [netplan_renderer](#netplan_renderer)
+  - [netplan_rts](#netplan_rts)
   - [netplan_version](#netplan_version)
   - [netplan_vlans](#netplan_vlans)
 - [Discovered Tags](#discovered-tags)
@@ -117,6 +118,30 @@ Renderer used by netplan
 
 ```YAML
 netplan_renderer: networkd
+```
+
+### netplan_rts
+
+Define the available routing tables
+
+#### Default value
+
+```YAML
+netplan_rts: []
+```
+
+#### Example usage
+
+```YAML
+netplan_rts:
+  - id: 255
+    name: local
+  - id: 254
+    name: main
+  - id: 253
+    name: default
+  - id: 0
+    name: unspec
 ```
 
 ### netplan_version
