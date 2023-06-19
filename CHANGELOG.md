@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/rolehippie/netplan/compare/v1.0.0...v1.1.0) (2023-06-19)
+
+
+### Features
+
+* optionally override routing tables ([cc26728](https://github.com/rolehippie/netplan/commit/cc26728c65f173a8d23489472fb29e8f3a4b2cde))
+
 ## 1.0.0 (2023-01-05)
 
 
