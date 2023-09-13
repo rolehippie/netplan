@@ -2,5 +2,6 @@
 ---
 netplan_packages:
   - nplan
+  - udev
 
 ...
