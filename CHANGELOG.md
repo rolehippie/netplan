@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/rolehippie/netplan/compare/v1.1.0...v1.1.1) (2023-09-18)
+
+
+### Bugfixes
+
+* install udev as requirement ([abc1df0](https://github.com/rolehippie/netplan/commit/abc1df0eb18492d2e9f62006936f7e2adc1b11af))
+
 ## [1.1.0](https://github.com/rolehippie/netplan/compare/v1.0.0...v1.1.0) (2023-06-19)
 
 
