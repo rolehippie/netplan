@@ -1,7 +1,6 @@
-# Standards: 1.2
 ---
 - name: Include OS tasks
-  include_vars: "{{ item }}"
+  ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
     - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
     - "{{ ansible_distribution | lower }}.yml"
@@ -11,7 +10,7 @@
 
 - name: Install required packages
   with_items: "{{ netplan_packages }}"
-  package:
+  ansible.builtin.package:
     name: "{{ item }}"
     state: present
   tags:
@@ -20,7 +19,7 @@
 - name: Write network config
   notify:
     - Apply netplan
-  template:
+  ansible.builtin.template:
     src: config.j2
     dest: "{{ netplan_config_file }}"
     owner: root
@@ -31,7 +30,7 @@
 
 - name: Create routing tables
   when: netplan_rts | length > 0
-  template:
+  ansible.builtin.template:
     src: rt.j2
     dest: /etc/iproute2/rt_tables
     owner: root
