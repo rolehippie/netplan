@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/rolehippie/netplan/compare/v1.1.1...v2.0.0) (2024-02-12)
+
+
+### Features
+
+* drop support for ubuntu 18.04 ([73a0243](https://github.com/rolehippie/netplan/commit/73a024338d81c4783d92a7fc29f2e651f20c339c))
+* used full qualified collection names ([0436c08](https://github.com/rolehippie/netplan/commit/0436c08cfe1476c5fe5b3edc5065d5f54aec92dd))
+
 ## [1.1.1](https://github.com/rolehippie/netplan/compare/v1.1.0...v1.1.1) (2023-09-18)
 
 
