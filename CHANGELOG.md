@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.1](https://github.com/rolehippie/netplan/compare/v2.0.0...v2.0.1) (2025-04-14)
+
+
+### Bugfixes
+
+* permissions and packages ([5193c80](https://github.com/rolehippie/netplan/commit/5193c80205e68e4d63e866aa6ae1653fb906a5b0))
+
 ## [2.0.0](https://github.com/rolehippie/netplan/compare/v1.1.1...v2.0.0) (2024-02-12)
 
 
