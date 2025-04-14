@@ -24,7 +24,7 @@
     dest: "{{ netplan_config_file }}"
     owner: root
     group: root
-    mode: u=rw,g=r,o=r
+    mode: u=rw,go=
   tags:
     - netplan
 

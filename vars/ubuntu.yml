@@ -1,6 +1,5 @@
 ---
 netplan_packages:
-  - nplan
   - netplan.io
   - udev
 
