@@ -1,4 +1,4 @@
-# workspace
+# netplan
 
 [![Source Code](https://img.shields.io/badge/github-source%20code-blue?logo=github&logoColor=white)](https://github.com/rolehippie/netplan)
 [![General Workflow](https://github.com/rolehippie/netplan/actions/workflows/general.yml/badge.svg)](https://github.com/rolehippie/netplan/actions/workflows/general.yml)
@@ -74,9 +74,9 @@ netplan_bridges:
 ```YAML
 netplan_bridges:
   virbr1:
-    dhcp4: True
+    dhcp4: true
     dhcp4-overrides:
-      use-routes: False
+      use-routes: false
     interfaces:
       - vlan905
 ```
@@ -106,7 +106,7 @@ netplan_ethernets:
 ```YAML
 netplan_ethernets: |
   enp6s0:
-    dhcp4: True
+    dhcp4: true
 ```
 
 ### netplan_renderer
@@ -169,7 +169,7 @@ netplan_vlans:
 netplan_vlans:
   vlan905:
     id: 905
-    dhcp4: True
+    dhcp4: true
     link: enp6s0
 ```
 

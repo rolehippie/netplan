@@ -9,7 +9,7 @@
     - netplan
 
 - name: Install required packages
-  with_items: "{{ netplan_packages }}"
+  loop: "{{ netplan_packages }}"
   ansible.builtin.package:
     name: "{{ item }}"
     state: present
@@ -29,13 +29,21 @@
     - netplan
 
 - name: Create routing tables
-  when: netplan_rts | length > 0
+  when:
+    - netplan_rts | length > 0
   ansible.builtin.template:
     src: rt.j2
     dest: /etc/iproute2/rt_tables
     owner: root
     group: root
     mode: u=rw,g=r,o=r
+  tags:
+    - netplan
+
+- name: Start udev service
+  ansible.builtin.systemd:
+    name: udev
+    state: started
   tags:
     - netplan
 

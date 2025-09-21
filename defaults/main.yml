@@ -12,7 +12,7 @@ netplan_config_file: /etc/netplan/01-netcfg.yaml
 # @var netplan_ethernets:example: >
 # netplan_ethernets: |
 #   enp6s0:
-#     dhcp4: True
+#     dhcp4: true
 # @end
 netplan_ethernets:
 
@@ -32,7 +32,7 @@ netplan_bonds:
 # netplan_vlans:
 #   vlan905:
 #     id: 905
-#     dhcp4: True
+#     dhcp4: true
 #     link: enp6s0
 # @end
 netplan_vlans:
@@ -41,9 +41,9 @@ netplan_vlans:
 # @var netplan_bridges:example: >
 # netplan_bridges:
 #   virbr1:
-#     dhcp4: True
+#     dhcp4: true
 #     dhcp4-overrides:
-#       use-routes: False
+#       use-routes: false
 #     interfaces:
 #       - vlan905
 # @end

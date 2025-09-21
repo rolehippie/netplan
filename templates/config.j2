@@ -1,23 +1,23 @@
 network:
   version: {{ netplan_version }}
   renderer: {{ netplan_renderer }}
-{% if netplan_ethernets | default(False) %}
+{% if netplan_ethernets is not none %}
 
   ethernets:
-    {{ netplan_ethernets | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=False) | trim }}
+    {{ netplan_ethernets | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=false) | trim }}
 {% endif %}
-{% if netplan_bonds | default(False) %}
+{% if netplan_bonds is not none %}
 
   bonds:
-    {{ netplan_bonds | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=False) | trim }}
+    {{ netplan_bonds | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=false) | trim }}
 {% endif %}
-{% if netplan_vlans | default(False) %}
+{% if netplan_vlans is not none %}
 
   vlans:
-    {{ netplan_vlans | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=False) | trim }}
+    {{ netplan_vlans | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=false) | trim }}
 {% endif %}
-{% if netplan_bridges | default(False) %}
+{% if netplan_bridges is not none %}
 
   bridges:
-    {{ netplan_bridges | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=False) | trim }}
+    {{ netplan_bridges | from_yaml | to_nice_yaml(indent=2) | indent(width=4, first=false) | trim }}
 {% endif %}

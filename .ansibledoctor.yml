@@ -1,4 +1,5 @@
 ---
-role_name: netplan
+role:
+  name: netplan
 
 ...
