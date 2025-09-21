@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/rolehippie/netplan/compare/v2.0.1...v2.1.0) (2025-09-21)
+
+
+### Features
+
+* apply new repo structure and update linting ([dae27a8](https://github.com/rolehippie/netplan/commit/dae27a822f3000bdd38cd9c47f42ee5b913f3fea))
+
 ## [2.0.1](https://github.com/rolehippie/netplan/compare/v2.0.0...v2.0.1) (2025-04-14)
 
 
