@@ -42,7 +42,7 @@
 
 - name: Start udev service
   ansible.builtin.systemd:
-    name: udev
+    name: "{{ 'udev' if ansible_distribution_version is version('26.04', '<') else 'systemd-udevd' }}"
     state: started
   tags:
     - netplan
