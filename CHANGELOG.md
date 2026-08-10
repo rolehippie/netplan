@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/rolehippie/netplan/compare/v2.3.0...v2.4.0) (2026-08-10)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-doctor to v8.4.0 ([#58](https://github.com/rolehippie/netplan/issues/58)) ([be33c97](https://github.com/rolehippie/netplan/commit/be33c97cc78a0cdc898dade65d31b830a521d2cc))
+* **patch:** update dependency python to v3.14.7 ([#56](https://github.com/rolehippie/netplan/issues/56)) ([aa187eb](https://github.com/rolehippie/netplan/commit/aa187ebb730ba85aaf96b6cfa14409f9229b68b1))
+
 ## [2.3.0](https://github.com/rolehippie/netplan/compare/v2.2.0...v2.3.0) (2026-07-27)
 
 ## [2.2.0](https://github.com/rolehippie/netplan/compare/v2.1.0...v2.2.0) (2026-07-03)
