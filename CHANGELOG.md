@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.0](https://github.com/rolehippie/netplan/compare/v2.4.0...v2.5.0) (2026-08-17)
+
+### Dependencies
+
+* **minor:** update dependency pipx:ansible-lint to v26.8.0 ([#61](https://github.com/rolehippie/netplan/issues/61)) ([0bbb564](https://github.com/rolehippie/netplan/commit/0bbb56494bf2e669801e3da88a0e9309d67f4cb2))
+* **minor:** update dependency pipx:molecule to v26.8.0 ([#62](https://github.com/rolehippie/netplan/issues/62)) ([a9e3edb](https://github.com/rolehippie/netplan/commit/a9e3edb763e6c92fe65f563ad70b6c8b9871508e))
+* **patch:** update dependency pipx:ansible-core to v2.21.3 ([#59](https://github.com/rolehippie/netplan/issues/59)) ([475b771](https://github.com/rolehippie/netplan/commit/475b7717c5788eeab7e22b8c6771e3bbdb76cbc1))
+* **patch:** update dependency pre-commit to v4.6.2 ([#60](https://github.com/rolehippie/netplan/issues/60)) ([1ff56e9](https://github.com/rolehippie/netplan/commit/1ff56e99d95767df30638943ab6a10a93774834b))
+
 ## [2.4.0](https://github.com/rolehippie/netplan/compare/v2.3.0...v2.4.0) (2026-08-10)
 
 ### Dependencies
