@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.6.0](https://github.com/rolehippie/netplan/compare/v2.5.1...v2.6.0) (2026-09-07)
+
+### Features
+
+* add separate requirements for molecule run ([a841885](https://github.com/rolehippie/netplan/commit/a8418859690db616b4431b780c5699f8ca883ffa))
+* use new required facts as attributes ([f2556e7](https://github.com/rolehippie/netplan/commit/f2556e74e0de495b0900de7cfbf177280ad78859))
+
 ## [2.5.1](https://github.com/rolehippie/netplan/compare/v2.5.0...v2.5.1) (2026-08-31)
 
 ### Dependencies
