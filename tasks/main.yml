@@ -2,9 +2,9 @@
 - name: Include OS tasks
   ansible.builtin.include_vars: "{{ item }}"
   with_first_found:
-    - "{{ ansible_distribution | lower }}-{{ ansible_distribution_version }}.yml"
-    - "{{ ansible_distribution | lower }}.yml"
-    - "{{ ansible_os_family | lower }}.yml"
+    - "{{ ansible_facts['distribution'] | lower }}-{{ ansible_facts['distribution_version'] }}.yml"
+    - "{{ ansible_facts['distribution'] | lower }}.yml"
+    - "{{ ansible_facts['os_family'] | lower }}.yml"
   tags:
     - netplan
 
@@ -42,7 +42,7 @@
 
 - name: Start udev service
   ansible.builtin.systemd:
-    name: "{{ 'udev' if ansible_distribution_version is version('26.04', '<') else 'systemd-udevd' }}"
+    name: "{{ 'udev' if ansible_facts['distribution_version'] is version('26.04', '<') else 'systemd-udevd' }}"
     state: started
   tags:
     - netplan
